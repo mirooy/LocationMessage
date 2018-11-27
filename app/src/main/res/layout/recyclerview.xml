@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior= "@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/recyclerview"
+    tools:context=".recyclerview">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tools"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:titleTextColor="@color/colorPrimaryDark"
+        app:title="temp title"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/testingtext"
+            android:textSize="12sp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/colorAccent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/testingtext2"
+            android:textSize="12sp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="14dp"
+            android:textColor="@color/colorAccent"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:id="@+id/locationButton"
+            android:textSize="12sp"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="startUpdatesButtonHandler"
+
+            android:text="Updates" />
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id = "@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars = "vertical"
+        android:paddingTop="100dp"
+
+        />
+
+
+
+
+</RelativeLayout>
